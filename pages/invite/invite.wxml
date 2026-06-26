@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view style="display:flex;align-items:center;">
+      <image src="/assets/avatar_placeholder.png" style="width:56px;height:56px;border-radius:28px"></image>
+      <view style="margin-left:12px">
+        <view style="font-size:18px;color:#333">{{nickname}}</view>
+        <view style="color:#999;margin-top:4px">邀请码：<text style="color:#1AAD19">{{inviteCode}}</text></view>
+      </view>
+    </view>
+    <view style="margin-top:12px">
+      <button class="btn" bindtap="onShare">分享给好友</button>
+      <button class="small-btn" bindtap="createAndSavePoster" style="margin-left:8px">保存海报</button>
+    </view>
+  </view>
+
+  <view class="card">
+    <view style="color:#666">邀请须知：被邀请人在 7 天内完成首单计为有效邀请</view>
+  </view>
+
+  <canvas canvas-id="posterCanvas" style="width:375px;height:600px;display:none;"></canvas>
+</view>

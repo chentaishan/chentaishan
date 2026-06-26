@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <image src="/assets/landing_banner.png" style="width:100%;height:140px;border-radius:8px;"></image>
+    <view style="margin-top:12px;font-size:16px;">活动规则：邀请 3 位好友完成首单，获得 1 次返现</view>
+  </view>
+
+  <view class="card">
+    <view style="display:flex;justify-content:space-between;align-items:center">
+      <view>
+        <view style="font-size:20px;color:#333">邀请进度</view>
+        <view style="color:#666;margin-top:6px">已邀请 {{invitedCount}} / 3 ，有效 {{validCount}} / 3</view>
+      </view>
+      <button class="btn" bindtap="onInvite">立即邀请</button>
+    </view>
+  </view>
+
+  <view style="margin-top:8px">
+    <button class="small-btn" bindtap="openRewards">查看奖励</button>
+    <button class="small-btn" bindtap="openRules" style="margin-left:8px">规则与帮助</button>
+  </view>
+</view>

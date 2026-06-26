@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card">
+    <image src="/assets/banner.png" style="width:100%;height:160px;border-radius:8px;"></image>
+    <view style="margin-top:12px;font-size:18px;color:#333">欢迎参加“推三返一”活动</view>
+    <view style="margin-top:8px;color:#666">绑定手机号以确认邀请关系并领取活动权益</view>
+    <view style="margin-top:16px">
+      <button class="btn" bindtap="onWechatLogin">微信登录并绑定手机号</button>
+    </view>
+  </view>
+
+  <view class="card">
+    <view style="font-size:14px;color:#666">或使用手机号登录</view>
+    <input placeholder="请输入手机号" value="{{phone}}" bindinput="onPhoneInput" />
+    <view style="display:flex;margin-top:8px;">
+      <input placeholder="验证码" value="{{smsCode}}" bindinput="onCodeInput" style="flex:1;margin-right:8px;" />
+      <button bindtap="sendSmsCode" class="small-btn">{{smsBtnText}}</button>
+    </view>
+    <view style="margin-top:12px"><button class="btn" bindtap="onPhoneBind">绑定并进入活动</button></view>
+  </view>
+</view>

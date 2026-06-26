@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card">
+    <view style="font-size:16px;color:#333">邀请进度</view>
+    <view style="margin-top:8px">有效邀请：{{validCount}} / 3</view>
+  </view>
+
+  <view class="card">
+    <view wx:for="{{invitees}}" wx:key="id" class="list-item" bindtap="openInviteDetail" data-id="{{item.id}}">
+      <image src="/assets/avatar_placeholder.png" style="width:44px;height:44px;border-radius:22px"></image>
+      <view class="meta">
+        <view>{{item.displayName}} <text style="color:#999;font-size:12px">（{{item.maskedPhone}}）</text></view>
+        <view style="margin-top:6px">
+          <view class="status-tag" style="background:#F0F0F0;color:#333">{{item.status}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

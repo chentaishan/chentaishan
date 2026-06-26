@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="card">
+    <view style="font-size:18px;color:#333">我的奖励</view>
+    <view style="font-size:24px;color:#1AAD19;margin-top:8px">¥{{balance}}</view>
+  </view>
+
+  <view class="card">
+    <view wx:for="{{rewards}}" wx:key="id" class="list-item">
+      <view style="flex:1">
+        <view>{{item.title}}</view>
+        <view style="color:#999;font-size:12px">{{item.desc}}</view>
+      </view>
+      <button class="small-btn" bindtap="claim" data-id="{{item.id}}">{{item.status === 'available' ? '领取' : item.status}}</button>
+    </view>
+  </view>
+</view>

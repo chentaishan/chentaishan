@@ -1,0 +1,8 @@
+/* 继承全局样式 */
+input {
+  height: 40px;
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 8px;
+}

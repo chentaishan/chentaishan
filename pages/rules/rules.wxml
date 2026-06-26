@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <view style="font-size:18px;color:#333">活动规则与申诉</view>
+    <view style="margin-top:12px;color:#666">1）邀请规则：邀请 3 人并且被邀请人在 7 天内完成首单视为有效邀请。</view>
+    <view style="margin-top:8px;color:#666">2）奖励发放：满足条件后系统自动发放至平台钱包。</view>
+    <view style="margin-top:8px;color:#666">3）申诉：若奖励未发放，可在此提交申诉。</view>
+    <view style="margin-top:12px"><button class="btn" bindtap="onAppeal">我要申诉</button></view>
+  </view>
+</view>

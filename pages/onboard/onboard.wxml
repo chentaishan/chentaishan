@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="card">
+    <view style="font-size:16px;color:#333">您是通过邀请加入的</view>
+    <view style="margin-top:8px;color:#666">邀请人：{{inviterName}}</view>
+    <view style="margin-top:12px">
+      <button class="btn" bindtap="quickRegister">快速注册并领取首单优惠</button>
+    </view>
+  </view>
+
+  <view class="card">
+    <view style="color:#666">首单优惠：¥20 优惠券（仅限新用户）</view>
+  </view>
+</view>

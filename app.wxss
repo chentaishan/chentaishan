@@ -1,0 +1,43 @@
+/** 全局样式 */
+page {
+  background: #fff;
+  font-family: -apple-system, "Helvetica Neue", "PingFang SC", "Microsoft YaHei";
+}
+.container {
+  padding: 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.btn {
+  background: #1AAD19;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+}
+.small-btn {
+  background: #fff;
+  border: 1px solid #1AAD19;
+  color: #1AAD19;
+  padding: 8px;
+  border-radius: 6px;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #F0F0F0;
+}
+.list-item .meta {
+  margin-left: 12px;
+}
+.status-tag {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
