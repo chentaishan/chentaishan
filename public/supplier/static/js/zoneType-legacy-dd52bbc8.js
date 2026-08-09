@@ -1,0 +1,1 @@
+System.register([],function(e,n){"use strict";return{execute:function(){e("g",function(e){var t=n.find(function(n){return n.zone_type===Number(e)});return t?t.name:""});var n=e("Z",[{zone_type:1,name:"品牌优选"},{zone_type:2,name:"惠民专区"},{zone_type:4,name:"合伙人区"},{zone_type:5,name:"兑换区"}])}}});

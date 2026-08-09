@@ -1,0 +1,69 @@
+<?php
+
+namespace app\admin\controller\file;
+
+use app\JjjController;
+use app\common\model\file\UploadImage;
+use app\common\library\storage\Driver as StorageDriver;
+use app\common\model\settings\Setting as SettingModel;
+
+/**
+ * 文件库管理
+ */
+class Upload extends JjjController
+{
+    /**
+     * 图片上传接口
+     */
+    public function image($categoryId, $file_type = 'image')
+    {
+        // 实例化存储驱动
+        $config = SettingModel::getSysConfig()['storage'];
+        $StorageDriver = new StorageDriver($config);
+        // 图片信息
+        $fileInfo = request()->file('iFile');
+        if (!$StorageDriver->validate('iFile', $fileInfo, $file_type)) {
+            return json(['code' => 0, 'msg' => $StorageDriver->getError()]);
+        }
+        // 设置上传文件的信息
+        $StorageDriver->setUploadFile('iFile');
+        // 上传图片
+        $saveName = $StorageDriver->upload();
+        if ($saveName == '') {
+            return json(['code' => 0, 'msg' => '图片上传失败' . $StorageDriver->getError()]);
+        }
+        $saveName = str_replace('\\', '/', $saveName);
+        // 图片上传路径
+        $fileName = $StorageDriver->getFileName();
+        // 添加文件库记录
+        $uploadFile = $this->addUploadFile($categoryId, $fileName, $fileInfo, $file_type, $saveName);
+        // 图片上传成功
+        return json(['code' => 1, 'msg' => '图片上传成功', 'data' => $uploadFile]);
+    }
+
+    /**
+     * 添加文件库上传记录
+     */
+    private function addUploadFile($group_id, $fileName, $fileInfo, $fileType, $savename)
+    {
+        // 存储引擎
+        $config = SettingModel::getSysConfig()['storage'];
+        $storage = $config['default'];
+        // 存储域名
+        if ($storage === 'local') {
+            $image = base_url() . 'uploads/' . $savename;
+        } else {
+            $fileUrl = isset($config['engine'][$storage]['domain'])
+                ? $config['engine'][$storage]['domain'] : '';
+            $image = $fileUrl . '/' . $fileName;
+        }
+        // 添加文件库记录
+        $model = new UploadImage;
+        $model->save([
+            'parent_id' => $group_id > 0 ? (int)$group_id : 0,
+            'image' => $image,
+            'name' => $fileInfo->getOriginalName(),
+        ]);
+        return $model;
+    }
+}

@@ -1,0 +1,1 @@
+import{i as t}from"./index-384ec8a7.js";async function a(a){return t({url:"/shop/data.user/lists",method:"post",data:a})}async function s(a){return t({url:"/shop/data.region/lists",method:"post",data:a})}async function o(a){return t({url:"/shop/data.coupon/index",method:"post",data:a})}export{s as a,o as b,a as g};

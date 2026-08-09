@@ -1,0 +1,6 @@
+; Windows 下 open_basedir 用分号 ; 分隔多个目录
+; 放开项目目录 + phpEnv 的临时目录，避免 PHP 启动时报 open_basedir restriction
+open_basedir=D:/phpEnv/www/xsy.duodao/;D:/phpEnv/temp/;C:/Windows/Temp/
+; 修改后若仍读旧值：重启 php-cgi / php-fpm / Apache 模块；默认会缓存 .user.ini（见 php.ini 的 user_ini.cache_ttl）
+; 仅本机调试可取消下一行注释，改为 0 表示每次请求重读 .user.ini（生产环境勿长期开启）
+user_ini.cache_ttl=0

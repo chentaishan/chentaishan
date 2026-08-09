@@ -1,0 +1,1 @@
+const e=[{zone_type:1,name:"品牌优选"},{zone_type:2,name:"惠民专区"},{zone_type:4,name:"合伙人区"},{zone_type:5,name:"兑换区"}];function n(n){const t=Number(n),o=e.find((e=>e.zone_type===t));return o?o.name:""}function t(e){return 3===Number(e)}function o(e){return 5===Number(e)}export{o as a,n as g,t as i};

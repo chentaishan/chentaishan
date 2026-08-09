@@ -1,0 +1,1 @@
+const n=[{zone_type:1,name:"优品区"},{zone_type:2,name:"消费区"}];function e(e){const r=n.find(n=>n.zone_type===Number(e));return r?r.name:""}function r(n){const e=Number(n);return 1===e?"danger":2===e?"warning":3===e?"primary":"info"}export{n as Z,r as a,e as g};

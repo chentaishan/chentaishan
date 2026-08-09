@@ -1,0 +1,1 @@
+import{i as t}from"./index-12e898e3.js";async function s(s){return t({url:"/shop/user.points/setting",method:"post",data:s})}async function n(s){return t({url:"/shop/user.points/setting",method:"get",data:s})}async function o(s){return t({url:"/shop/user.points/log",method:"get",data:s})}export{o as G,n as g,s};

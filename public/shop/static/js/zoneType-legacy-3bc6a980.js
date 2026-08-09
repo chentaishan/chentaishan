@@ -1,0 +1,1 @@
+System.register([],function(n,e){"use strict";return{execute:function(){n({a:function(n){var e=Number(n);return 1===e?"danger":2===e?"warning":3===e?"primary":"info"},g:function(n){var r=e.find(function(e){return e.zone_type===Number(n)});return r?r.name:""}});var e=n("Z",[{zone_type:1,name:"品牌优选"},{zone_type:2,name:"惠民专区"},{zone_type:4,name:"合伙人区"}])}}});

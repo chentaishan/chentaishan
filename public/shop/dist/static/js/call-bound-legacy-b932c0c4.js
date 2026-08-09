@@ -1,0 +1,1 @@
+System.register(["./get-intrinsic-legacy-021684d6.js","./call-bind-apply-helpers-legacy-682ea488.js"],function(t,e){"use strict";var n,r;return{setters:[function(t){n=t.g},function(t){r=t.c}],execute:function(){var e=n,c=r,i=c([e("%String.prototype.indexOf%")]);t("c",function(t,n){var r=e(t,!!n);return"function"==typeof r&&i(t,".prototype.")>-1?c([r]):r})}}});

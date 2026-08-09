@@ -1,0 +1,1 @@
+import{i as n}from"./index-384ec8a7.js";async function t(t){return n({url:"/shop/index/base",method:"post",data:t})}async function o(t){return n({url:"/shop/Index/index",method:"post",data:t})}export{t as b,o as g};

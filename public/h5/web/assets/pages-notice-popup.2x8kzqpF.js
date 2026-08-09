@@ -1,0 +1,1 @@
+import{s as o,aa as a}from"./index-BOcTTwFR.js";const e={onLoad(e){let n="/static/lunbo/1.png";e&&e.img&&(n=decodeURIComponent(e.img)),o("notice_overlay_payload",JSON.stringify({img:n,ts:Date.now()})),a({url:"/pages/index/index"})}};export{e as default};

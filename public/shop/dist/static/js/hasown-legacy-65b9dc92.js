@@ -1,0 +1,1 @@
+System.register(["./function-bind-legacy-3acbea42.js"],function(t,r){"use strict";var e;return{setters:[function(t){e=t.r}],execute:function(){var r,n;t("r",function(){if(n)return r;n=1;var t=Function.prototype.call,c=Object.prototype.hasOwnProperty,o=e();return r=o.call(t,c)})}}});

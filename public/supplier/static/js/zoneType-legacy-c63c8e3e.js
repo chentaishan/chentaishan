@@ -1,0 +1,1 @@
+System.register([],function(e,n){"use strict";return{execute:function(){e("g",function(e){var t=n.find(function(n){return n.zone_type===Number(e)});return t?t.name:""});var n=e("Z",[{zone_type:1,name:"优品区"},{zone_type:2,name:"消费区"}])}}});

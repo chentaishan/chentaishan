@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+
+/.idea/
+/runtime/
+/public/uploads/
+
+/*.log
+*.log
+
+/node_modules/
+/vendor/bin/.phpunit.result.cache

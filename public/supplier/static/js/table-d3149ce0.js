@@ -1,0 +1,1 @@
+const r=r=>{let d={isFirst:!1,index:0,rowSpan:1};for(let i=0;i<r.length;i++){let n=r[i];n.rowSpan=null,d.isFirst?d.product_id!=n.product_id?(r[d.index].rowSpan=d.rowSpan,d.rowSpan=1,d.index=i,d.product_id=n.product_id):d.rowSpan++:(d.isFirst=!0,d.index=i,d.product_id=n.product_id)}return r[d.index].rowSpan=d.rowSpan,r};export{r as m};

@@ -1,0 +1,1 @@
+import{aw as s,c as e,o as a,ax as n,h as o}from"./index-C4KMAwox.js";const t={__name:"consignment",setup(t){const{proxy:r}=n();return s((()=>{(async()=>{await r._get("user.order/getOrderConsignSaleList",{},(s=>{console.log(s)}))})()})),(s,n)=>{const t=o;return a(),e(t)}}};export{t as default};
